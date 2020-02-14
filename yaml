@@ -1,68 +1,125 @@
 Firm:
   Dream:
     1st:
-      Sotrudniki:
+      Oplata-level:
+        100
+          Sotrudniki:
 	    Dolgnost:
-		  Buhgalter:
-		    Name:
-			  Olga
-			  Olga
-			  Olga
-			  Olga
-	2nd:
+	      Buhgalter:
+	        Name:
+                  Olga
+		Sex:
+		  F
+		  Olga
+		Sex:
+		  F
+	          Olga
+		Sex:
+		  F
+	          Olga
+		Sex:
+		  F
+    2nd:
+      Oplata-level:
+        80
 	  Sotrudniki:
 	    Dolgnost:
-		  Urist:
-		    Name:
-			  Roman
-			  Roman
-			  Roman
-			  Roman
-		  Driver:
-            Maks
-            Maks			
+	      Urist:
+	        Name:
+	          Roman
+		Old:
+		  <30
+		Sex:
+		  M
+	          Roman
+		Old:
+		  <30
+		Sex:
+		  M
+	          Roman
+		Old:
+		  <30
+		Sex:
+		  M
+		  Roman
+		Old:
+		  <30
+		Sex:
+		  M
+	      Driver:
+	        Name:
+		  Maks
+		Sex:
+		  M
+                  Maks
+		Sex:
+		  M
 	3td:
-	  Sotrudniki:
-	    Dolgnost:
-		  Urist:
-		    Name:
-		      Olga
-		  Stroiteli:
+	  Oplata-level:
+	    80
+	    Sotrudniki:
+	      Dolgnost:
+	        Urist:
+		  Name:
+		    Olga
+		  Sex:
+		    F
+		Stroiteli:
+		  Name:
 		    Ivan
-			Nikolai
+		  Sex:
+		    M
+		    Nikolai
+		  Sex:
+		    M
 	4:
-	  Sotrudniki:
-	    Dolgnost:
-		  Name:
+	  Oplata-level:
+	    80
+	    Sotrudniki:
+	      Dolgnost:
+	        Paper:
+	          Name:
 		    Ulya
-			Ulya
-			Ulya
-			Ulya
-			Ulya
-	5:
-	  Sotrudniki:
-	    Dolgnost:
-		  Name:
-		    Ulya:
 		  Old:
 		    30+
-		    Ulya:
-		  Old:
-			30+
-			Ulya
-		  Old:
-		    30+
-			Ulya
+		  Sex:
+		    F
+		    Ulya
 		  Old:
 		    30+
-			Ulya
+		  Sex:
+		    F
+        5:
+	  Oplata-level:
+	    90
+	    Sotrudniki:
+	      Dolgnost:
+	        Paper:
+	          Name:		      
+	            Ulya
 		  Old:
 		    30+
+		  Sex:
+		    F
+		    Ulya
+		  Old:
+		    30+
+		  Sex:
+		    F
+		    Ulya
+		  Old:
+		    30+
+		  Sex:
+		    F
 	6:
-	  Sotrudniki:
-	    Dolgnost:
-		  DirectodOfSecuryty:
-		    Name:
-			  Igor Viktorovich
-			Old:
-              50+	
+	  Oplata-level:
+	    80
+	    Sotrudniki:
+	      Dolgnost:
+	        DirectodOfSecuryty:
+		  Name:
+	            Igor Viktorovich
+		  Old:
+                    50+
+		  Sex:
+		    M

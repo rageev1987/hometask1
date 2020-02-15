@@ -1,0 +1,56 @@
+
+---
+- name: install tomcat
+  hosts: web
+  become: yes
+
+  tasks:
+  - name: Ensure tomcat8 package is present
+    apt:
+      name: tomcat8
+      state: present
+
+  - name: Ensure tomcat service is started
+    service:
+      name: tomcat8
+      state: started
+
+- name: install default-djk, maven, git
+  hosts: db
+  become: yes
+
+  tasks:
+  - name: Ensure default-djk, maven, git is present
+    apt:
+      pkg:
+      name: default-djk
+      state: present
+      name: maven
+      state: present
+      name: git
+      state: present
+
+  - name: git clone boxfuse
+    git:
+      repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
+      dest: /home/boxfuse-sample-java-war-hello
+      clone: yes
+
+  -  name: mvn package
+     shell: cd /home/boxfuse-sample-java-war-hello/ && mvn package
+         
+  - name: Fetch artifact from db to local tmp
+    fetch:
+      src: /home/boxfuse-sample-java-war-hello/target/hello-1.0.war
+      dest: /tmp/
+
+- name: copy to web
+  hosts: web
+  become: yes
+ 
+  tasks:
+  - name: copy artifact to web
+    copy:
+      src: /tmp/84.201.167.126/home/boxfuse-sample-java-war-hello/target/hello-1.0.war
+      dest: /var/lib/tomcat8/webapps/
+

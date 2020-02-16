@@ -1,20 +1,20 @@
 docker-compose.yml
 version: '2'
 services:
-  build:
+  main:
+    container_name: main
     build: .
     links:
       - web
     volumes_from:
       - web
     volumes:
-      - ./artifacts:/home/dz1:rw
-      - cp /home/dz1/boxfuse-sample-java-war-hello/target/hello-1.0.war /home/dz1/hello-1.0.war
-  web:
+      - ./artifacts:/home/dz1/boxfuse-sample-java-war-hello/target:rw
+   web:
+    container_name: web
     image: tomcat
     volumes:
       - ./artifacts:/usr/local/tomcat/webapps:rw
-      - cp /artifacts/hello-1.0.war /usr/local/tomcat/webapps/hello-1.0.war
     ports:
       - "8080:8080"
  
@@ -28,3 +28,4 @@ RUN mkdir /home/dz1/
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git /home/dz1/boxfuse-sample-java-war-hello
 WORKDIR /home/dz1/boxfuse-sample-java-war-hello/
 RUN mvn package
+CMD ["/bin/bash","run"]

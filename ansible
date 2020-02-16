@@ -15,15 +15,15 @@
       name: tomcat8
       state: started
 
-- name: install default-djk, maven, git
+- name: install default-jdk, maven, git
   hosts: db
   become: yes
 
   tasks:
-  - name: Ensure default-djk, maven, git is present
+  - name: Ensure default-jdk, maven, git is present
     apt:
       pkg:
-      name: default-djk
+      name: default-jdk
       state: present
       name: maven
       state: present
